@@ -1,0 +1,288 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600&display=swap');
+
+body {
+    font-family: 'Quicksand', 'Segoe UI', sans-serif;
+    background-color: #FFF5E6; /* Warm Cream */
+    color: #4A4A4A;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 25px 0;
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.15); /* Soft Orange Shadow */
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    border-bottom: 5px solid #FFA500;
+}
+
+h1 {
+    font-family: 'Fredoka One', cursive;
+    margin: 0;
+    color: #8B4513; /* Saddle Brown */
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+.admin-link {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    text-decoration: none;
+    color: #8B4513;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background-color: #FFE6CC;
+    transition: all 0.3s ease;
+}
+
+.admin-link:hover {
+    background-color: #FFA500;
+    color: white;
+}
+
+/* Search Area */
+.search-container {
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 650px;
+    padding: 0 20px;
+}
+
+.search-form {
+    display: flex;
+    gap: 15px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 15px 25px;
+    border: 3px solid #FFDAB9;
+    border-radius: 30px;
+    font-size: 1.1em;
+    outline: none;
+    transition: border-color 0.3s;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.search-input:focus {
+    border-color: #FFA500;
+}
+
+.search-button {
+    padding: 15px 35px;
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 1px;
+}
+
+.search-button:hover {
+    background-color: #FF8C00;
+    transform: scale(1.05);
+}
+
+/* Categories */
+.categories {
+    margin-bottom: 40px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category-tag {
+    background: #FFF0E0;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #8B4513;
+    font-weight: 600;
+    font-size: 1em;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.category-tag:hover,
+.category-tag.active {
+    background: #FFA500;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 165, 0, 0.3);
+}
+
+/* Cards Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1250px;
+    width: 100%;
+}
+
+.card {
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(139, 69, 19, 0.05);
+    overflow: hidden;
+    width: 320px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #FFE4C4;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(255, 165, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.6em;
+    margin: 0 0 12px;
+    color: #8B4513;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+    flex: 1;
+    font-size: 1.05em;
+}
+
+.card .category-label {
+    display: inline-block;
+    background: #FFF5E6;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    color: #CC7000;
+    margin-top: 15px;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.no-results {
+    text-align: center;
+    color: #8B4513;
+    font-size: 1.5em;
+    margin-top: 60px;
+    font-family: 'Fredoka One', cursive;
+}
+
+/* Login Page Specifics */
+body.login-body {
+    justify-content: center;
+    background-image: radial-gradient(#FFF0E0 15%, transparent 16%), radial-gradient(#FFF0E0 15%, transparent 16%);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+}
+
+.login-container {
+    background: white;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(255, 165, 0, 0.15);
+    width: 340px;
+    text-align: center;
+    border: 4px solid #FFF5E6;
+}
+
+.login-container h2 {
+    font-family: 'Fredoka One', cursive;
+    color: #8B4513;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 2px solid #FFE4C4;
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.login-container input:focus {
+    border-color: #FFA500;
+    outline: none;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 15px;
+    background-color: #FF8C00;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-family: 'Fredoka One', cursive;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-container button:hover {
+    background-color: #E67E00;
+    transform: translateY(-2px);
+}
+
+.message {
+    margin-top: 20px;
+    color: #D32F2F;
+    font-weight: bold;
+    background: #FFEBEE;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 25px;
+    text-decoration: none;
+    color: #8B4513;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #FF8C00;
+}
